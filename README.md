@@ -1,40 +1,57 @@
 # firebase(1)
 
-Control your Firebases from the command line.
+Control your [Firebase](http://firebase.com) from the command line.
+
+## Installation
+
+```
+$ npm install -g firebase-cli
+```
+
+## Usage
+
+The first time you use `firebase(1)` you'll be prompted for your 
+email and password. Firebase accounts authorized with Github aren't 
+supported at this time (pull requests welcome).
+
+```
+$ firebase --help
+
+  Usage: firebase <command> [<args>]
+
+  Commands:
+
+    ls                     list namespaces
+    create [namespace]     create [namespace]
+    rm [namespace]         remove [namespace]
+    forge [namespace]      open [namespace] in Forge
+    set [key] [value]      set configuration options
+
+  Options:
+
+    -h, --help           output usage information
+    -V, --version        output the version number
+    -c, --config <file>  specify configuration file
+```
 
 ## TODO
 
 Everything!
 
-### config
-- [x] config loader: loads `~/.fn`
-- [ ] config option: --config specifies file
-
-### options
-- [ ] silent stifles stdout
-
-### auth
-- [x] get an auth key from email/pass and store it
-
 ### namespace
-- [x] ls
-- [x] create
-- [x] rm
-- [ ] exists
-- [x] view in Forge
-- [ ] namespace info:
-  - [ ] name
-  - [ ] timestamp
-  - [ ] storage
-  - [ ] bandwidth 30d
-  - [ ] concurrents 30d
+- `exists [namespace]`
+- `info [namespace]`
+  - name
+  - timestamp
+  - storage
+  - bandwidth
+  - concurrents
 
 ### security rules
-- [ ] prettyprint rules
-- [ ] backup rules
-- [ ] migrate (update rules)
-  - [ ] validation
+- prettyprint rules
+- backup rules
+- migrate (update rules)
 
 ### data
-- [ ] backup data with `format=export`
-- [ ] seed (upload) data
+- `backup [namespace]` (with `format=export`)
+- seeding (upload data from json)
