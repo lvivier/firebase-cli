@@ -1,6 +1,6 @@
 {
   "name": "firebase-cli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "firebase(1) Firebase on the commmand line",
   "keywords": [
     "firebase"
@@ -16,7 +16,8 @@
     "superagent": "~0.15.4",
     "easy-table": "~0.2.0",
     "moment": "~2.1.0",
-    "open": "0.0.4"
+    "open": "0.0.4",
+    "debug": "~0.7.2"
   },
   "bin": {
     "firebase": "./bin/firebase"

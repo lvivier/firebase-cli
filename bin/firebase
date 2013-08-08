@@ -6,36 +6,38 @@
 
 var app = require('commander')
   , version = require('../package.json').version
-  , command = require('../lib/commands')
+  , commands = require('../lib/commands')
+  , config = require('../lib/config')
 
 app
   .version(version)
   .usage('<command> [<args>]')
-  .option('-s --silent', 'silent mode (no output)')
+  .option('-c, --config <file>', 'specify configuration file', config.resolve)
 
 app
   .command('ls')
   .description('list namespaces')
-  .action(command.ls)
+  .action(commands.ls)
 
 app
   .command('create [namespace]')
   .description('create [namespace]')
-  .action(command.create)
+  .action(commands.create)
 
 app
   .command('rm [namespace]')
   .description('remove [namespace]')
-  .action(command.rm)
+  .action(commands.rm)
 
 app
   .command('forge [namespace]')
   .description('open [namespace] in Forge')
-  .action(command.forge)
+  .action(commands.forge)
 
 app
-  .command('config [key] [value]')
+  .command('set [key] [value]')
   .description('set configuration options')
-  .action(command.configure)
+  .action(commands.configure)
 
 app.parse(process.argv)
+
