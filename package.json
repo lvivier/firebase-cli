@@ -1,0 +1,24 @@
+{
+  "name": "firebase-cli",
+  "version": "0.0.1",
+  "description": "firebase(1) Firebase on the commmand line",
+  "keywords": [
+    "firebase"
+  ],
+  "author": "Luke Vivier <luke@vivier.ca>",
+  "repository": "https://github.com/lvivier/firebase-cli.git",
+  "homepage": "https://github.com/lvivier/firebase-cli",
+  "dependencies": {
+    "commander": "~1.3.2",
+    "getset": "~0.5.4",
+    "touch": "0.0.2",
+    "nimble": "0.0.2",
+    "superagent": "~0.15.4",
+    "easy-table": "~0.2.0",
+    "moment": "~2.1.0",
+    "open": "0.0.4"
+  },
+  "bin": {
+    "firebase": "./bin/firebase"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "camelcase": true,
+  "forin": true,
+  "indent": 2,
+  "newcap": true,
+  "quotmark": true,
+  "undef": true,
+  "unused": true,
+  "asi": true,
+  "laxcomma": true,
+  "node": true,
+  "es5": true
+}

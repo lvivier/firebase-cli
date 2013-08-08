@@ -1,0 +1,41 @@
+#!/usr/bin/env node
+
+/**
+ * Dependencies
+ */
+
+var app = require('commander')
+  , version = require('../package.json').version
+  , command = require('../lib/commands')
+
+app
+  .version(version)
+  .usage('<command> [<args>]')
+  .option('-s --silent', 'silent mode (no output)')
+
+app
+  .command('ls')
+  .description('list namespaces')
+  .action(command.ls)
+
+app
+  .command('create [namespace]')
+  .description('create [namespace]')
+  .action(command.create)
+
+app
+  .command('rm [namespace]')
+  .description('remove [namespace]')
+  .action(command.rm)
+
+app
+  .command('forge [namespace]')
+  .description('open [namespace] in Forge')
+  .action(command.forge)
+
+app
+  .command('config [key] [value]')
+  .description('set configuration options')
+  .action(command.configure)
+
+app.parse(process.argv)
