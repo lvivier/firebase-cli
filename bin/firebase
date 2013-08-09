@@ -22,6 +22,11 @@ app
 app
   .command('create [namespace]')
   .description('create [namespace]')
+
+app
+  .command('forge [namespace]')
+  .description('open [namespace] in Forge')
+  .action(commands.forge)
   .action(commands.create)
 
 app
@@ -30,14 +35,12 @@ app
   .action(commands.rm)
 
 app
-  .command('forge [namespace]')
-  .description('open [namespace] in Forge')
-  .action(commands.forge)
-
-app
   .command('set [key] [value]')
   .description('set configuration options')
   .action(commands.configure)
 
 app.parse(process.argv)
 
+// display help if no command or "help"
+var cmd = app.args[0]
+if (!cmd || 'help' == cmd) app.help()
