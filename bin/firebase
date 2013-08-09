@@ -11,8 +11,9 @@ var app = require('commander')
 
 app
   .version(version)
-  .usage('<command> [<args>]')
-  .option('-c, --config <file>', 'specify configuration file', config.resolve)
+  .usage('<command> [namespace] [--config file] [--token token]')
+  .option('-c, --config <file>', 'use configuration file', config.resolve)
+  .option('-t, --token <token>', 'use auth token', config.token)
 
 app
   .command('ls')
