@@ -11,8 +11,11 @@ $ npm install -g firebase-cli
 ## Usage
 
 The first time you use `firebase(1)` you'll be prompted for your 
-email and password. Firebase accounts authorized with Github aren't 
-supported at this time (pull requests welcome).
+email and password. Firebase auth tokens expire after 30 days, so 
+you'll be asked again periodically. Your email and password aren't stored.
+
+Firebase accounts authorized with Github aren't supported at this 
+time (pull requests welcome).
 
 ```
 $ firebase --help
@@ -23,35 +26,28 @@ $ firebase --help
 
     ls                     list namespaces
     create [namespace]     create [namespace]
-    rm [namespace]         remove [namespace]
     forge [namespace]      open [namespace] in Forge
+    rm [namespace]         remove [namespace]
     set [key] [value]      set configuration options
 
   Options:
 
     -h, --help           output usage information
     -V, --version        output the version number
-    -c, --config <file>  specify configuration file
+    -c, --config <file>  use configuration file
+    -t, --token <token>  use auth token
 ```
 
 ## TODO
 
-Everything!
-
-### namespace
-- `exists [namespace]`
-- `info [namespace]`
-  - name
-  - timestamp
-  - storage
-  - bandwidth
-  - concurrents
+Still lots to implement:
 
 ### security rules
-- prettyprint rules
-- backup rules
-- migrate (update rules)
+
+    firebase rules [ns]    print rules
+    firebase migrate [ns]  set rules
 
 ### data
-- `backup [namespace]` (with `format=export`)
-- seeding (upload data from json)
+
+    firebase backup [ns]   backup data
+    firebase seed [ns]     replace w/new data
