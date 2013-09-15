@@ -11,28 +11,33 @@ var app = require('commander')
 
 app
   .version(version)
-  .usage('<command> [namespace] [--config file] [--token token]')
+  .usage('<command> [firebase] [--config file] [--token token]')
   .option('-c, --config <file>', 'use configuration file', config.resolve)
   .option('-t, --token <token>', 'use auth token', config.token)
 
 app
   .command('ls')
-  .description('list namespaces')
+  .description('list firebases')
   .action(commands.ls)
 
 app
-  .command('create [namespace]')
-  .description('create [namespace]')
+  .command('info [firebase]')
+  .description('show info on [firebase]')
+  .action(commands.info)
 
 app
-  .command('forge [namespace]')
-  .description('open [namespace] in Forge')
-  .action(commands.forge)
+  .command('create [firebase]')
+  .description('create [firebase]')
   .action(commands.create)
 
 app
-  .command('rm [namespace]')
-  .description('remove [namespace]')
+  .command('forge [firebase]')
+  .description('open [firebase] in Forge')
+  .action(commands.forge)
+
+app
+  .command('rm [firebase]')
+  .description('remove [firebase]')
   .action(commands.rm)
 
 app
