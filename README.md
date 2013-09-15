@@ -14,7 +14,7 @@ The first time you use `firebase(1)` you'll be prompted for your
 email and password. Firebase auth tokens expire after 30 days, so 
 you'll be asked again periodically. Your email and password aren't stored.
 
-Firebase accounts authorized with Github aren't supported at this 
+Firebase accounts authorized with GitHub aren't supported at this 
 time (pull requests welcome).
 
 ```
