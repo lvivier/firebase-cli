@@ -1,6 +1,6 @@
 {
   "name": "firebase-cli",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "firebase(1) Firebase on the commmand line",
   "keywords": [
     "firebase"

@@ -24,10 +24,11 @@ $ firebase --help
 
   Commands:
 
-    ls                     list namespaces
-    create [namespace]     create [namespace]
-    forge [namespace]      open [namespace] in Forge
-    rm [namespace]         remove [namespace]
+    ls                     list firebases
+    info [firebase]        show info on [firebase]
+    forge [firebase]       open [firebase] in Forge
+    create [firebase]      create [firebase]
+    rm [firebase]          remove [firebase]
     set [key] [value]      set configuration options
 
   Options:
@@ -41,6 +42,12 @@ $ firebase --help
 ## TODO
 
 Still lots to implement:
+
+## firebase-level
+
+- get an auth token for a firebase
+- get a secret for a firebase
+- store firebase secrets
 
 ### security rules
 
