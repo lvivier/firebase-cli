@@ -21,24 +21,34 @@ app
   .action(commands.ls)
 
 app
-  .command('info [firebase]')
-  .description('show info on [firebase]')
+  .command('info [name]')
+  .description('show info on a firebase')
   .action(commands.info)
 
 app
-  .command('create [firebase]')
-  .description('create [firebase]')
+  .command('create [name]')
+  .description('create firebase with [name]')
   .action(commands.create)
 
 app
-  .command('forge [firebase]')
-  .description('open [firebase] in Forge')
+  .command('forge [name]')
+  .description('open firebase in Forge')
   .action(commands.forge)
 
 app
-  .command('rm [firebase]')
-  .description('remove [firebase]')
+  .command('rm [name]')
+  .description('remove firebase')
   .action(commands.rm)
+
+app
+  .command('rules [name]')
+  .description('show rules for firebase')
+  .action(commands.rules)
+
+app
+  .command('migrate [name] [file]')
+  .description('set new rules for firebase')
+  .action(commands.migrate)
 
 app
   .command('set [key] [value]')

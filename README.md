@@ -20,15 +20,17 @@ time (pull requests welcome).
 ```
 $ firebase --help
 
-  Usage: firebase <command> [<args>]
+  Usage: firebase <command> [firebase] [--config file] [--token token]
 
   Commands:
 
     ls                     list firebases
-    info [firebase]        show info on [firebase]
-    forge [firebase]       open [firebase] in Forge
-    create [firebase]      create [firebase]
-    rm [firebase]          remove [firebase]
+    info [name]            show info on a firebase
+    create [name]          create firebase with [name]
+    forge [name]           open firebase in Forge
+    rm [name]              remove firebase
+    rules [name]           show rules for firebase
+    migrate [name] [file]  set new rules for firebase
     set [key] [value]      set configuration options
 
   Options:
@@ -43,18 +45,11 @@ $ firebase --help
 
 Still lots to implement:
 
-## firebase-level
-
-- get an auth token for a firebase
-- get a secret for a firebase
 - store firebase secrets
-
-### security rules
-
-    firebase rules [ns]    print rules
-    firebase migrate [ns]  set rules
-
-### data
-
-    firebase backup [ns]   backup data
-    firebase seed [ns]     replace w/new data
+- additional commands:
+  
+  ```
+  firebase migrate [ns]  set rules
+  firebase backup [ns]   backup data
+  firebase seed [ns]     replace w/new data
+  ```
