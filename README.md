@@ -2,10 +2,12 @@
 
 Control your [Firebase](http://firebase.com) from the command line.
 
+**NOTE** There's now an offical [Firebase command line tools](https://github.com/firebase/firebase-tools)!
+
 ## Installation
 
 ```
-$ npm install -g firebase-cli
+$ npm install -g lvivier/firebase-cli
 ```
 
 ## Usage
