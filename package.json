@@ -2,6 +2,7 @@
   "name": "firebase-cli",
   "version": "0.0.5",
   "description": "firebase(1) Firebase on the commmand line",
+  "license": "MIT",
   "keywords": [
     "firebase"
   ],
