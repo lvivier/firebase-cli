@@ -21,22 +21,22 @@ app
   .action(commands.ls)
 
 app
-  .command('info [name]')
+  .command('info <name>')
   .description('show info on a firebase')
   .action(commands.info)
 
 app
-  .command('create [name]')
+  .command('create <name>')
   .description('create firebase with [name]')
   .action(commands.create)
 
 app
-  .command('forge [name]')
+  .command('forge <name>')
   .description('open firebase in Forge')
   .action(commands.forge)
 
 app
-  .command('rm [name]')
+  .command('rm <name>')
   .description('remove firebase')
   .action(commands.rm)
 
