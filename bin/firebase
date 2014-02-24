@@ -41,14 +41,9 @@ app
   .action(commands.rm)
 
 app
-  .command('rules [name]')
-  .description('show rules for firebase')
+  .command('rules <name> [rules]')
+  .description('get/set rules for firebase')
   .action(commands.rules)
-
-app
-  .command('migrate [name] [file]')
-  .description('set new rules for firebase')
-  .action(commands.migrate)
 
 app
   .command('set [key] [value]')
