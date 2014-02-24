@@ -19,6 +19,8 @@ you'll be asked again periodically. Your email and password aren't stored.
 Firebase accounts authorized with GitHub aren't supported at this 
 time (pull requests welcome).
 
+## Overview
+
 ```
 $ firebase --help
 
@@ -32,6 +34,7 @@ $ firebase --help
     forge <name>           open firebase in Forge
     rm <name>              remove firebase
     rules <name> [rules]   get/set rules for firebase
+    seed <name> <data>     seed firebase with new data
     set [key] [value]      set configuration options
 
   Options:
@@ -42,15 +45,8 @@ $ firebase --help
     -t, --token <token>  use auth token
 ```
 
-## TODO
-
-- store firebase secrets
-- additional commands:
-  
-  ```
-  firebase backup [ns]   backup data
-  firebase seed [ns]     replace w/new data
-  ```
+The **rules** and **seed** commands will accept either a filename or 
+JSON-encoded text for input.
 
 ## License
 

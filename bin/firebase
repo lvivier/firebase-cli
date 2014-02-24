@@ -5,9 +5,13 @@
  */
 
 var app = require('commander')
-  , version = require('../package.json').version
-  , commands = require('../lib/commands')
-  , config = require('../lib/config')
+var version = require('../package.json').version
+var commands = require('../lib/commands')
+var config = require('../lib/config')
+
+/**
+ * Application
+ */
 
 app
   .version(version)
@@ -26,14 +30,14 @@ app
   .action(commands.info)
 
 app
-  .command('create <name>')
-  .description('create firebase with [name]')
-  .action(commands.create)
-
-app
   .command('forge <name>')
   .description('open firebase in Forge')
   .action(commands.forge)
+
+app
+  .command('create <name>')
+  .description('create firebase with [name]')
+  .action(commands.create)
 
 app
   .command('rm <name>')
@@ -44,6 +48,11 @@ app
   .command('rules <name> [rules]')
   .description('get/set rules for firebase')
   .action(commands.rules)
+
+app
+  .command('seed <name> <data>')
+  .description('seed firebase with new data')
+  .action(commands.seed)
 
 app
   .command('set [key] [value]')
